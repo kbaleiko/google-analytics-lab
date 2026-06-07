@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html lang="uk"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Лабораторна робота 1 - Google Analytics 4</title> 
+        <!-- Google Analytics 4 --> 
+         <!-- Замініть G-XXXXXXXXXX на свій Measurement ID --> 
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> 
+         <script> 
+            window.dataLayer = window.dataLayer || []; 
+            function gtag(){dataLayer.push(arguments);} 
+            gtag('js', new Date()); 
+            gtag('config', 'G-XXXXXXXXXX'); 
+            </script> 
+         <style> 
+            body { 
+                font-family: Arial, sans-serif; 
+                background: #f4f6f8; 
+                margin: 0; 
+                padding: 0; 
+            } 
+            header { 
+                background: #4285F4; 
+                color: white; 
+                text-align: center; 
+                padding: 40px; 
+            } 
+            main { 
+                max-width: 900px; 
+                margin: 30px auto; 
+                background: white; 
+                padding: 30px; 
+                border-radius: 10px; 
+                box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+            } 
+            h1, h2 { 
+                color: #333; 
+            } 
+            .card { 
+                background: #f8f9fa; 
+                padding: 20px; 
+                margin-top: 15px; 
+                border-left: 5px solid #4285F4; 
+                border-radius: 5px; 
+            } 
+            footer { 
+                text-align: center; 
+                padding: 20px; 
+                background: #222; 
+                color: white; 
+                margin-top: 30px; 
+            } 
+            button { 
+                background: #4285F4; 
+                color: white; 
+                border: none; 
+                padding: 12px 20px; 
+                border-radius: 5px; 
+                cursor: pointer; 
+                margin-top: 15px; 
+            } 
+            button:hover { 
+                background: #3367d6; 
+            } 
+        </style> 
+    </head> 
+    <body> 
+        <header> 
+            <h1>Практична робота 1</h1> 
+            <p>Встановлення коду відстеження Google Analytics 4</p> 
+        </header> 
+        <main> 
+            <h2>Мета роботи</h2> 
+            <div class="card"> Навчитися встановлювати код відстеження Google Analytics 4 та перевіряти передачу даних на сайт. </div> 
+            <h2>Що таке Google Analytics 4?</h2> 
+            <div class="card"> Google Analytics 4 (GA4) - це сучасна система веб-аналітики, яка дозволяє збирати статистику про відвідувачів сайту, джерела трафіку та поведінку користувачів. </div> 
+            <h2>Перевірка роботи</h2> 
+            <div class="card"> Після відкриття цієї сторінки інформація про відвідування буде передаватися до вашого ресурсу Google Analytics 4. </div> 
+            <button onclick="alert('Подія успішно виконана!')"> Натиснути кнопку </button> 
+        </main> 
+        <footer> Практична робота з Google Analytics 4 | 2026 </footer> 
+    </body> 
+</html>
