@@ -1,38 +1,51 @@
 <!DOCTYPE html> 
 <html lang="uk"> 
     <head> 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGRC9SYRZ8"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-HGRC9SYRZ8');
-        </script> 
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-T369HXPT');</script>
-        <!-- End Google Tag Manager -->
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Лабораторна робота 1 - Google Analytics 4</title> 
-         <style> 
+        <title>Лабораторні роботи - Google Analytics 4 та Google Tag Manager</title> 
+        <script> 
+            window.dataLayer = window.dataLayer || []; 
+            
+            dataLayer.push({ 
+                siteType: "Educational Website", 
+                author: "Kyrylo Baleiko", 
+                pageOpenTime: new Date().toLocaleString(), 
+                event: "page_data_loaded" 
+            }); 
+        </script> 
+        
+        <!-- Google Tag Manager --> 
+        <script> 
+            (function(w,d,s,l,i){ 
+                w[l]=w[l]||[]; 
+                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'}); 
+                var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:''; 
+                j.async=true; 
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; 
+                f.parentNode.insertBefore(j,f); 
+            })(window,document,'script','dataLayer','GTM-T369HXPT'); 
+        </script> 
+        <!-- End Google Tag Manager --> 
+        
+        <style> 
             body { 
                 font-family: Arial, sans-serif; 
                 background: #f4f6f8; 
-                margin: 0; 
-                padding: 0; 
+                margin: 0; padding: 0; 
             } 
+            
             header { 
                 background: #4285F4; 
                 color: white; 
                 text-align: center; 
-                padding: 40px; 
+                padding: 40px 20px; 
             } 
+            
+            header h1 { 
+                color: white; 
+            } 
+            
             main { 
                 max-width: 900px; 
                 margin: 30px auto; 
@@ -41,9 +54,11 @@
                 border-radius: 10px; 
                 box-shadow: 0 0 15px rgba(0,0,0,0.1); 
             } 
+            
             h1, h2 { 
                 color: #333; 
             } 
+            
             .card { 
                 background: #f8f9fa; 
                 padding: 20px; 
@@ -51,13 +66,7 @@
                 border-left: 5px solid #4285F4; 
                 border-radius: 5px; 
             } 
-            footer { 
-                text-align: center; 
-                padding: 20px; 
-                background: #222; 
-                color: white; 
-                margin-top: 30px; 
-            } 
+            
             button { 
                 background: #4285F4; 
                 color: white; 
@@ -65,34 +74,111 @@
                 padding: 12px 20px; 
                 border-radius: 5px; 
                 cursor: pointer; 
-                margin-top: 15px; 
+                margin: 10px 10px 0 0; 
+                font-size: 15px; 
             } 
+            
             button:hover { 
                 background: #3367d6; 
             } 
+            
+            .buy-button { 
+                background: #34A853; 
+            } 
+            
+            .buy-button:hover { 
+                background: #2c8f46; 
+            } 
+            
+            footer { 
+                text-align: center; 
+                padding: 20px; 
+                background: #222; 
+                color: white; 
+                margin-top: 30px; 
+            } 
         </style> 
     </head> 
+    
     <body> 
-        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T369HXPT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+        
+        <!-- Google Tag Manager (noscript) --> 
+        <noscript> 
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T369HXPT" 
+                height="0" width="0" style="display:none;visibility:hidden"></iframe> 
+        </noscript> 
+        <!-- End Google Tag Manager (noscript) --> 
+        
         <header> 
-            <h1>Практична робота 1</h1> 
-            <p>Встановлення коду відстеження Google Analytics 4</p> 
+            <h1>Лабораторні роботи з Google Analytics 4</h1> 
+            <p>Google Tag Manager, GA4, dataLayer, події та конверсії</p> 
         </header> 
+        
         <main> 
-            <h2>Мета роботи</h2> 
-            <div class="card"> Навчитися встановлювати код відстеження Google Analytics 4 та перевіряти передачу даних на сайт. </div> 
-            <h2>Що таке Google Analytics 4?</h2> 
-            <div class="card"> Google Analytics 4 (GA4) - це сучасна система веб-аналітики, яка дозволяє збирати статистику про відвідувачів сайту, джерела трафіку та поведінку користувачів. </div> 
-            <h2>Перевірка роботи</h2> 
-            <div class="card"> Після відкриття цієї сторінки інформація про відвідування буде передаватися до вашого ресурсу Google Analytics 4. </div> 
-            <button onclick="gtag('event', 'form_submit');">
-                Надіслати заявку
-            </button>
-            <button onclick="alert('Подія успішно виконана!')"> Натиснути кнопку </button> 
-        </main> 
-        <footer> Практична робота з Google Analytics 4 | 2026 </footer> 
+            <h2>Практична робота 1</h2> 
+            <div class="card"> 
+                Встановлено Google Tag Manager на сайт. Код GTM розміщено в секціях 
+                <strong>&lt;head&gt;</strong> та <strong>&lt;body&gt;</strong>. 
+            </div> <h2>Практична робота 2</h2> 
+            
+            <div class="card"> 
+                Через Google Tag Manager налаштовано тег Google Analytics 4. У GTM потрібно створити тег 
+                <strong>Google Tag</strong> з ідентифікатором <strong>G-HGRC9SYRZ8</strong> та тригером <strong>All Pages</strong>. 
+            </div> 
+            
+            <h2>Практична робота 3</h2> 
+            <div class="card"> 
+                На сайт додано рівень даних <strong>dataLayer</strong>. Передаються статичні та динамічні дані: <br>
+                <br> <strong>siteType:</strong> Educational Website<br> <strong>author:</strong> Kate<br> <strong>pageOpenTime:</strong> час відкриття сторінки <br>
+                <br> Також налаштовано подію <strong>form_submit</strong>. <br> <button onclick="submitForm()">Надіслати заявку</button> 
+            </div> 
+            
+            <h2>Практична робота 4</h2> 
+            <div class="card"> 
+                Додано приклад події покупки для відстеження конверсій та ремаркетингу. Подія передає ID товару, назву, ціну та валюту. <br>
+                <br> <strong>Товар:</strong> Google Analytics Lab Product<br> <strong>Ціна:</strong> 100 UAH <br> 
+                <button class="buy-button" onclick="buyProduct()">Купити товар</button> 
+            </div> 
+            
+            <h2>Тестова взаємодія</h2> 
+            <div class="card"> 
+                Ця кнопка створює просту тестову подію <strong>test_click</strong>. <br> 
+                <button onclick="testClick()">Натиснути кнопку</button> 
+            </div> </main> 
+        
+        
+        <footer> Лабораторні роботи з Google Analytics 4 та Google Tag Manager | 2026 </footer> 
+        
+        <script> 
+            function submitForm() { 
+                dataLayer.push({ 
+                    event: "form_submit", 
+                    buttonName: "Надіслати заявку", 
+                    formName: "Application Form", 
+                    submitTime: new Date().toLocaleString() 
+                }); 
+                
+                alert("Подію form_submit передано в dataLayer"); 
+            } 
+            
+            function buyProduct() { 
+                dataLayer.push({ 
+                    event: "purchase", 
+                    product_id: "001", 
+                    product_name: "Google Analytics Lab Product", 
+                    price: 100, 
+                    currency: "UAH", 
+                    purchaseTime: new Date().toLocaleString() 
+                }); 
+                
+                alert("Подію purchase передано в dataLayer"); 
+            } 
+            function testClick() { 
+                dataLayer.push({ 
+                    event: "test_click", 
+                    buttonName: "Тестова кнопка", 
+                    clickTime: new Date().toLocaleString() }); 
+                alert("Тестову подію передано в dataLayer"); 
+            } </script> 
     </body> 
 </html>
